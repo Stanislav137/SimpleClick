@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.click.simpleclick.StartActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15">
+        <TextView
+            android:text="Score: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textScore"
+            android:layout_weight="2" />
+        <TextView
+            android:text="Lives: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textLives"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/buttonsGrid"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="3"
+            android:layout_rowWeight="3"
+            android:onClick="whenPressed"
+            android:text="" />
+
+    </GridLayout>
+
+</LinearLayout>
