@@ -12,8 +12,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import anim.ExplosionField;
+
 public class GameActivity extends AppCompatActivity {
 
+    private ExplosionField mExplosionField;
     private int difficulty;
     private Button btn1;
     private Button btn2;
@@ -46,6 +49,7 @@ public class GameActivity extends AppCompatActivity {
         btn9 = (Button) findViewById(R.id.btn9);
         textScore = (TextView) findViewById(R.id.textScore);
         textLives = (TextView) findViewById(R.id.textLives);
+        mExplosionField = ExplosionField.attach2Window(this);
     }
     @Override
     protected void onStart()
@@ -78,13 +82,12 @@ public class GameActivity extends AppCompatActivity {
         allButtons = ((GridLayout) findViewById(R.id.buttonsGrid)).getTouchables();
         for (View button : allButtons){
             button.setBackgroundColor(Color.GREEN);
+            //mExplosionField.explode(button);
         }
     }
     private void checkLives(){
-        if (lives < 1){
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "You lost", Toast.LENGTH_SHORT);
-            toast.show();
+        if(lives < 1){
+
         }
     }
 
@@ -146,12 +149,13 @@ public class GameActivity extends AppCompatActivity {
         pressed = true;
         score++;
         textScore.setText("Score: " + score);
+
         if (score % 5 == 0){
             lives++;
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Five in a row, you got additional life", Toast.LENGTH_SHORT);
             toast.show();
-            difficulty+=1000;
+            difficulty-=100;
         }
 
         textLives.setText("Lives: " + lives);
